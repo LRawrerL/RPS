@@ -66,5 +66,7 @@ function Rounds(num)
     }
 }
 
-Rounds(4);
+number = Number(prompt(`How many Rounds do you want?`));
+
+Rounds(number)
 
