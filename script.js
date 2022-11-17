@@ -3,60 +3,68 @@ function getComputerChoice()
     choice = [`Rock`, `Paper`, `Scissors`];
     array_Index = Math.floor(Math.random() * 3);
     ai = choice[array_Index];
-    console.log(ai);
-    console.log(array_Index);
     return ai;
 }
 
 function RPS(playerSelect, computerSelection)
 {
-    if (playerSelect == "Rock")
+    if (playerSelect.toUpperCase() == "ROCK")
     {
         if (computerSelection == "Scissors")
         {
-            console.log("You win!");
+            alert("You win!");
         }
         else if (computerSelection == "Paper")
         {
-            console.log("You lose!");
+            alert("You lose!");
         }
         else
         {
-            console.log("Its a Draw!");
+            alert("Its a Draw!");
         }
     }
-    if (playerSelect == "Paper")
+    if (playerSelect.toUpperCase() == "PAPER")
     {
         if (computerSelection == "Rock")
         {
-            console.log("You win!");
+            alert("You win!");
         }
         else if (computerSelection == "Scissors")
         {
-            console.log("You lose!");
+            alert("You lose!");
         }
         else
         {
-            console.log("Its a Draw!");
+            alert("Its a Draw!");
         }
     }
-    if (playerSelect == "Scissors")
+    if (playerSelect.toUpperCase() == "SCISSORS")
     {
         if (computerSelection == "Paper")
         {
-            console.log("You win!");
+            alert("You win!");
         }
         else if (computerSelection == "Rock")
         {
-            console.log("You lose!");
+            alert("You lose!");
         }
         else
         {
-            console.log("Its a Draw!");
+            alert("Its a Draw!");
         }
     }
 }
 
-computerSelection = getComputerChoice();
-playerSelect = "Scissors";
-RPS(playerSelect, computerSelection);
+
+function Rounds(num)
+{
+    for (let i = 0; i < num; i++)
+    {
+        playerSelect = prompt("Choose between Rock, Paper, or Scissors. ")
+        computerSelection = getComputerChoice();
+        RPS(playerSelect, computerSelection);   
+    }
+}
+
+Rounds(4);
+
